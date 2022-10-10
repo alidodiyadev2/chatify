@@ -163,6 +163,48 @@ class _AuthScreenState extends State<AuthScreen> {
     try {
       late UserCredential authResult;
       if (isLogin) {
+        authResult = awai
+
+class _AuthScreenState extends State<AuthScreen> {
+  final _auth = FirebaseAuth.instance;
+  var _isLoading = false;
+
+  void _submitAuthForm(String email, String password, String username,
+      bool isLogin, BuildContext ctx, File? image) async {
+    setState(() {
+      _isLoading = true;
+    });
+    try {
+      late UserCredential authResult;
+      if (isLogin) {
+        authResult = awai
+
+class _AuthScreenState extends State<AuthScreen> {
+  final _auth = FirebaseAuth.instance;
+  var _isLoading = false;
+
+  void _submitAuthForm(String email, String password, String username,
+      bool isLogin, BuildContext ctx, File? image) async {
+    setState(() {
+      _isLoading = true;
+    });
+    try {
+      late UserCredential authResult;
+      if (isLogin) {
+        authResult = awai
+
+class _AuthScreenState extends State<AuthScreen> {
+  final _auth = FirebaseAuth.instance;
+  var _isLoading = false;
+
+  void _submitAuthForm(String email, String password, String username,
+      bool isLogin, BuildContext ctx, File? image) async {
+    setState(() {
+      _isLoading = true;
+    });
+    try {
+      late UserCredential authResult;
+      if (isLogin) {
         authResult = await _auth.signInWithEmailAndPassword(
             email: email, password: password);
       } else {
@@ -233,14 +275,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
       if (err.message != null) {
         message = err.message ?? "";
-      }
-
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text(message)));
-    } catch (err) {
-      print(err);
-    } finally {
-      setState(() {
+      
         _isLoading = false;
       });
     }
